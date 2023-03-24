@@ -25,15 +25,32 @@
                     <div class="data1C">
                         <h1>DATA</h1>
                         <a style="text-decoration:none"  class="href_back2" href="menu_dokter.php"><h2>➤ DOKTER</h2></a>
-                        <a style="text-decoration:none"  class="href_back2" href="menu_pasien.php"><h2>➤ PASIEN</h2></a>
-                        <a style="text-decoration:none"  class="href_back2" href="menu_poli.php"><h2>➤ POLI</h2></a>
-                        <a style="text-decoration:none"  class="href_back2" href="home.php"><h2>➤ HOME</h2></a>
+                        <a style="text-decoration:none"  class="href_back2" href="<?=BASEURL?>/pasien/index"><h2>➤ PASIEN</h2></a>
+                        <a style="text-decoration:none"  class="href_back2" href="<?=BASEURL?>/poli/index"><h2>➤ POLI</h2></a>
+                        <a style="text-decoration:none"  class="href_back2" href="<?=BASEURL?>/home/index"><h2>➤ HOME</h2></a>
                     </div>
                 </div>
                 <div class="box2C">
                     <div class="data2C">
                         <h1>MENU DOKTER</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore perspiciatis recusandae beatae quidem quo, ipsam consectetur pariatur suscipit nemo nulla aspernatur corrupti rem est modi nesciunt aliquam voluptatibus sit omnis!Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore perspiciatis recusandae beatae quidem quo, ipsam consectetur pariatur suscipit nemo nulla aspernatur corrupti rem est modi nesciunt aliquam voluptatibus sit omnis!Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore perspiciatis recusandae beatae quidem quo, ipsam consectetur pariatur suscipit nemo nulla aspernatur corrupti rem est modi nesciunt aliquam voluptatibus sit omnis!Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <p>
+                        <table>
+                                    <tr?>
+                                        <td>ID Dokter</td>
+                                        <td>NAMA DOKTER</td>
+                                        <td>AKSI</td>
+                                    </tr>
+                            <?php foreach ($data['dokter'] as $dokter) : ?>
+                                
+                                    <tr?>
+                                        <td><?= $dokter['id_dokter']?></td>
+                                        <td><?= $dokter['nama_dokter']?></td>
+                                        <td><a href="<?= BASEURL?>/dokter/detail/<?=$dokter['id_dokter']?>">detail</a></td>
+                                    </tr>
+                                
+                            <?php endforeach; ?>
+                            </table>
+                        </p>
                     </div>
                 </div>
             </div>
