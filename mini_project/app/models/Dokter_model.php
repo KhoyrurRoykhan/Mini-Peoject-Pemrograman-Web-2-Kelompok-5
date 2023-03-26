@@ -30,5 +30,7 @@ class Dokter_model {
 
     }
 
+    
+
 
 }
