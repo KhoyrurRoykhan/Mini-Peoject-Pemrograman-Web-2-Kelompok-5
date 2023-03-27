@@ -1,5 +1,5 @@
 <div class="modal-body">
-        <form action="<?= BASEURL; ?>/admintransaksi/ubah" method="post">
+        <form class="form-update" action="<?= BASEURL; ?>/admintransaksi/ubah" method="post">
         <div class="form-group">
         <div class="mb-3">
             <label for="id_transaksi" class="form-label">Id Transaksi</label>
