@@ -9,13 +9,12 @@ class Login_model {
         $this->db = new Database;
     }
 
-    public function getAllLogin()
-    {
-        $this->db->query('SELECT * FROM ' . $this->table);
-        return $this->db->resultSet();
+    public function getAllLogin(){
+        $this->db->query('SELECT * FROM LOGIN WHERE id = 1');
+        return $this->db->single();
     }
     public function confirmlog($data){
-        $usr = $data['username'];
-        $pass = $data['password'];
+        $input= array("username"=>$data['username'], "password"=>$data['password']);
+        return $input;
     }
 }
