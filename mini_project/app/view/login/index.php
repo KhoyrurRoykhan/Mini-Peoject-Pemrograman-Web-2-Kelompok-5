@@ -21,7 +21,7 @@
                 <input type="password" placeholder="Password" id="password" name="password">
                 <button type="submit">Login</button>
                 <p>
-                    <a style="text-decoration:none" href="#">Forgot Password?</a>
+                    
                 </p>
             </form>
         </div>
